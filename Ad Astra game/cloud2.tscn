@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://hdfu5fve2qv0"]
+
+[ext_resource type="Texture2D" uid="uid://cyq41couqc7sb" path="res://spritesheet_retina.png" id="1_3d6en"]
+[ext_resource type="Script" path="res://cloud1.gd" id="2_m1oip"]
+[ext_resource type="PackedScene" uid="uid://deh5wtw32osk0" path="res://lightning.tscn" id="3_yn5o5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3d6en")
+region_enabled = true
+region_rect = Rect2(-0.472164, 434.57, 503.365, 287.917)
+script = ExtResource("2_m1oip")
+
+[node name="Lightning" parent="Sprite2D" instance=ExtResource("3_yn5o5")]
+position = Vector2(17, 47)

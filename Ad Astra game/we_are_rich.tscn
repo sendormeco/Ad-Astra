@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://xgeyo6n38k41"]
+
+[ext_resource type="PackedScene" uid="uid://0m0iulhplpto" path="res://star.tscn" id="1_11sg3"]
+
+[node name="WeAreRich" type="Node2D"]
+
+[node name="star" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(100, 0)
+
+[node name="star2" parent="." instance=ExtResource("1_11sg3")]
+
+[node name="star3" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(-100, 0)
+
+[node name="star4" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(200, 0)
+
+[node name="star5" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(-200, 0)
+
+[node name="star6" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(300, 0)
+
+[node name="star7" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(-300, 0)
+
+[node name="star8" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(400, 0)
+
+[node name="star9" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(-400, 0)
+
+[node name="star10" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(500, 0)
+
+[node name="star11" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(-500, 0)
+
+[node name="star12" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(600, 1)
+
+[node name="star13" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(700, 1)
+
+[node name="star14" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(800, 1)
+
+[node name="star15" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(-600, 0)
+
+[node name="star16" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(-700, 0)
+
+[node name="star17" parent="." instance=ExtResource("1_11sg3")]
+position = Vector2(-800, 0)

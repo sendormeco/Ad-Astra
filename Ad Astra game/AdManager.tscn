@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyb23k5x6h0vu"]
+
+[ext_resource type="Script" path="res://AdManager.gd" id="1_f67yy"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_f67yy")

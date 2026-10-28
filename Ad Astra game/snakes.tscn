@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://clfghf7i4njg4"]
+
+[ext_resource type="PackedScene" uid="uid://iaexx280vwhy" path="res://snake.tscn" id="1_18v15"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="snake" parent="." instance=ExtResource("1_18v15")]
+
+[node name="snake2" parent="." instance=ExtResource("1_18v15")]
+position = Vector2(300, 0)
+
+[node name="snake3" parent="." instance=ExtResource("1_18v15")]
+position = Vector2(-300, 0)
+
+[node name="snake4" parent="." instance=ExtResource("1_18v15")]
+position = Vector2(600, 0)
+
+[node name="snake5" parent="." instance=ExtResource("1_18v15")]
+position = Vector2(-600, 0)
+
+[node name="snake6" parent="." instance=ExtResource("1_18v15")]
+position = Vector2(900, 0)
+
+[node name="snake7" parent="." instance=ExtResource("1_18v15")]
+position = Vector2(-900, 0)

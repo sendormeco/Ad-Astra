@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://camwpy2e3fa27"]
+
+[ext_resource type="Script" path="res://cloud1.gd" id="1_ea6pp"]
+[ext_resource type="Texture2D" uid="uid://ky3vukslr0xu" path="res://spaceShooter2_spritesheet.png" id="2_rwyto"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.5, 0.5, 0.5, 1)
+texture = ExtResource("2_rwyto")
+region_enabled = true
+region_rect = Rect2(276.344, 190.185, 165.751, 65.1716)
+script = ExtResource("1_ea6pp")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://t4h1pk6yf4rd"]
+
+[ext_resource type="Texture2D" uid="uid://cyq41couqc7sb" path="res://spritesheet_retina.png" id="1_pn66f"]
+[ext_resource type="Script" path="res://cloud1.gd" id="2_6pbg6"]
+
+[node name="mega_cloud" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pn66f")
+region_enabled = true
+region_rect = Rect2(558.001, 0.671341, 410.169, 240.33)
+script = ExtResource("2_6pbg6")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqyqepngl14te"
+path="res://.godot/imported/Stellar Quest.mp3-aca866b3dceba4caf7104dbb3de29a27.mp3str"
+
+[deps]
+
+source_file="res://Stellar Quest.mp3"
+dest_files=["res://.godot/imported/Stellar Quest.mp3-aca866b3dceba4caf7104dbb3de29a27.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

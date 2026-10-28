@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qxxmmnsge53p"
+path="res://.godot/imported/Stellar Drift.mp3-abd88c1685d298af15108a36b9e5d7b3.mp3str"
+
+[deps]
+
+source_file="res://Stellar Drift.mp3"
+dest_files=["res://.godot/imported/Stellar Drift.mp3-abd88c1685d298af15108a36b9e5d7b3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

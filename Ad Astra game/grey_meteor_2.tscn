@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpr4dapphbdxn"]
+
+[ext_resource type="Texture2D" uid="uid://bsa041rs6ydp7" path="res://meteorGrey_big2.png" id="1_1dvxs"]
+[ext_resource type="Script" path="res://asteroid_1.gd" id="1_gwecl"]
+[ext_resource type="AudioStream" uid="uid://bc86u2t0ruq4h" path="res://explosionCrunch_000.ogg" id="3_0164o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scswf"]
+size = Vector2(221, 126)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_gwecl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(11, 9)
+scale = Vector2(2, 2)
+texture = ExtResource("1_1dvxs")
+region_rect = Rect2(0.476357, 400.475, 217.324, 220.825)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5, 2)
+shape = SubResource("RectangleShape2D_scswf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0164o")
+volume_db = -30.0

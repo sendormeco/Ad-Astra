@@ -1,0 +1,140 @@
+[gd_scene load_steps=15 format=3 uid="uid://djoark5sr1p0y"]
+
+[ext_resource type="Script" path="res://records.gd" id="1_gtrd8"]
+[ext_resource type="Texture2D" uid="uid://cy458eo42gfxn" path="res://button_rectangle_depth.png" id="1_p6ks3"]
+[ext_resource type="FontFile" uid="uid://ub8x6j61hkcb" path="res://Bowler.ttf" id="2_eklsd"]
+[ext_resource type="Texture2D" uid="uid://bv0v0b6gj6hkc" path="res://sheet_black2x.png" id="3_lrc2n"]
+[ext_resource type="Texture2D" uid="uid://c5ax0tc27hqmn" path="res://cloudLayer1.png" id="5_b6nlb"]
+[ext_resource type="AudioStream" uid="uid://qxxmmnsge53p" path="res://Stellar Drift.mp3" id="6_6lmsg"]
+[ext_resource type="Script" path="res://cloud_controller_main_menu.gd" id="7_7f14d"]
+[ext_resource type="PackedScene" uid="uid://ycdyi6yw3w37" path="res://cloud.tscn" id="8_j58ik"]
+[ext_resource type="PackedScene" uid="uid://hdfu5fve2qv0" path="res://cloud2.tscn" id="9_14v8i"]
+[ext_resource type="PackedScene" uid="uid://b3bicggnc55th" path="res://cloud_4.tscn" id="10_sx08c"]
+[ext_resource type="PackedScene" uid="uid://qjyuwu5153au" path="res://cloud_5.tscn" id="11_drye3"]
+[ext_resource type="PackedScene" uid="uid://d3hfua76yk2if" path="res://cloud_6.tscn" id="12_3jyoq"]
+[ext_resource type="PackedScene" uid="uid://bvqnpbxtque4l" path="res://cloud_7.tscn" id="13_5k641"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lofra"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_gtrd8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.815686, 0.937255, 0.988235, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -198.0
+offset_right = 80.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_lofra")
+
+[node name="cloud_controller_main_menu" type="Node2D" parent="."]
+position = Vector2(449, 605)
+script = ExtResource("7_7f14d")
+cloud_scenes = Array[PackedScene]([ExtResource("8_j58ik"), ExtResource("9_14v8i"), ExtResource("10_sx08c"), ExtResource("11_drye3"), ExtResource("12_3jyoq"), ExtResource("13_5k641")])
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2547.5, 2055.05)
+scale = Vector2(5.13184, 2.49525)
+texture = ExtResource("5_b6nlb")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -364.5
+offset_top = 112.0
+offset_right = 364.5
+offset_bottom = 240.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_eklsd")
+theme_override_font_sizes/font_size = 125
+text = "рекорды"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_6lmsg")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 131.0
+offset_top = 485.0
+offset_right = 833.0
+offset_bottom = 1385.0
+theme_override_constants/separation = 100
+
+[node name="Label1" type="Label" parent="VBoxContainer"]
+modulate = Color(0.95, 0.823333, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_eklsd")
+theme_override_font_sizes/font_size = 100
+text = "record "
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+modulate = Color(0.6, 0.6, 0.6, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_eklsd")
+theme_override_font_sizes/font_size = 100
+text = "record "
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+modulate = Color(0.846619, 0.39835, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_eklsd")
+theme_override_font_sizes/font_size = 100
+text = "record "
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+modulate = Color(0.128149, 0.477994, 1, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_eklsd")
+theme_override_font_sizes/font_size = 100
+text = "record "
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+modulate = Color(0.0986476, 0.737134, 1.92523e-07, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_eklsd")
+theme_override_font_sizes/font_size = 100
+text = "record "
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(432, 589)
+
+[node name="BackButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -196.0
+offset_top = -323.0
+offset_right = 196.0
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+icon = ExtResource("1_p6ks3")
+
+[node name="Label" type="Label" parent="BackButton"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 35.0
+offset_top = 35.0
+offset_right = 346.0
+offset_bottom = 135.0
+theme_override_fonts/font = ExtResource("2_eklsd")
+theme_override_font_sizes/font_size = 60
+text = "назад"
+
+[node name="Sprite2D" type="Sprite2D" parent="BackButton"]
+position = Vector2(328, 69)
+texture = ExtResource("3_lrc2n")
+region_enabled = true
+region_rect = Rect2(506.237, 309.711, 93.9079, 86.2106)

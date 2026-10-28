@@ -1,0 +1,179 @@
+[gd_scene load_steps=15 format=3 uid="uid://d0uao5j33h2uo"]
+
+[ext_resource type="Script" path="res://settings_manager.gd" id="1_62tqf"]
+[ext_resource type="FontFile" uid="uid://ub8x6j61hkcb" path="res://Bowler.ttf" id="1_mp5o3"]
+[ext_resource type="Texture2D" uid="uid://cy458eo42gfxn" path="res://button_rectangle_depth.png" id="3_wmpcu"]
+[ext_resource type="Texture2D" uid="uid://c5ax0tc27hqmn" path="res://cloudLayer1.png" id="4_fer6d"]
+[ext_resource type="Texture2D" uid="uid://bv0v0b6gj6hkc" path="res://sheet_black2x.png" id="4_ib24n"]
+[ext_resource type="Script" path="res://cloud_controller_main_menu.gd" id="5_a2twf"]
+[ext_resource type="PackedScene" uid="uid://ycdyi6yw3w37" path="res://cloud.tscn" id="6_fftje"]
+[ext_resource type="PackedScene" uid="uid://hdfu5fve2qv0" path="res://cloud2.tscn" id="7_p3t1e"]
+[ext_resource type="PackedScene" uid="uid://b3bicggnc55th" path="res://cloud_4.tscn" id="8_he0nq"]
+[ext_resource type="PackedScene" uid="uid://qjyuwu5153au" path="res://cloud_5.tscn" id="9_42cax"]
+[ext_resource type="PackedScene" uid="uid://d3hfua76yk2if" path="res://cloud_6.tscn" id="10_d17f2"]
+[ext_resource type="PackedScene" uid="uid://bvqnpbxtque4l" path="res://cloud_7.tscn" id="11_hm6jl"]
+[ext_resource type="AudioStream" uid="uid://qxxmmnsge53p" path="res://Stellar Drift.mp3" id="13_cnm6p"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_0adap"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_62tqf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.815686, 0.937255, 0.988235, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -198.0
+offset_right = 80.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_0adap")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -364.5
+offset_top = 112.0
+offset_right = 364.5
+offset_bottom = 240.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_mp5o3")
+theme_override_font_sizes/font_size = 125
+text = "настройки"
+horizontal_alignment = 1
+
+[node name="TrailToggle" type="CheckBox" parent="."]
+visible = false
+offset_left = 30.0
+offset_top = 1322.0
+offset_right = 950.0
+offset_bottom = 1664.0
+text = "
+"
+expand_icon = true
+
+[node name="SoundSlider" type="HSlider" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -68.0
+offset_right = -14.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 3)
+max_value = 1.0
+step = 0.01
+
+[node name="Value" type="Label" parent="."]
+offset_left = 235.0
+offset_top = 1797.0
+offset_right = 342.0
+offset_bottom = 1820.0
+text = "qweqweqweqфывафва"
+
+[node name="Value2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = -438.0
+offset_right = 145.0
+offset_bottom = -358.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_mp5o3")
+theme_override_font_sizes/font_size = 80
+text = "музыка"
+
+[node name="MusicSlider" type="HSlider" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -354.0
+offset_right = -14.0
+offset_bottom = -338.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 3)
+max_value = 1.0
+step = 0.01
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2417.5, 2030.36)
+scale = Vector2(4.87793, 2.3718)
+texture = ExtResource("4_fer6d")
+
+[node name="cloud_controller_main_menu" type="Node2D" parent="."]
+position = Vector2(449, 605)
+script = ExtResource("5_a2twf")
+cloud_scenes = Array[PackedScene]([ExtResource("6_fftje"), ExtResource("7_p3t1e"), ExtResource("8_he0nq"), ExtResource("9_42cax"), ExtResource("10_d17f2"), ExtResource("11_hm6jl")])
+
+[node name="Value3" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.5
+offset_top = -147.0
+offset_right = 159.5
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_mp5o3")
+theme_override_font_sizes/font_size = 80
+text = "звуки"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(432, 1153)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_cnm6p")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="BackButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -196.0
+offset_top = -323.0
+offset_right = 196.0
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+icon = ExtResource("3_wmpcu")
+
+[node name="Label" type="Label" parent="BackButton"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 39.0
+offset_right = 357.0
+offset_bottom = 139.0
+theme_override_fonts/font = ExtResource("1_mp5o3")
+theme_override_font_sizes/font_size = 60
+text = "назад"
+
+[node name="Sprite2D" type="Sprite2D" parent="BackButton"]
+position = Vector2(337, 69)
+texture = ExtResource("4_ib24n")
+region_enabled = true
+region_rect = Rect2(506.237, 309.711, 93.9079, 86.2106)

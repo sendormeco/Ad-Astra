@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3hfua76yk2if"]
+
+[ext_resource type="Texture2D" uid="uid://conyubsi0napf" path="res://cloud7.png" id="1_xlrt4"]
+[ext_resource type="Script" path="res://cloud1.gd" id="2_yqich"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xlrt4")
+region_rect = Rect2(-0.472164, 434.57, 503.365, 287.917)
+script = ExtResource("2_yqich")

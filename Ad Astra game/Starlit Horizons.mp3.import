@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlnh5authx1es"
+path="res://.godot/imported/Starlit Horizons.mp3-71919efaad5f4643ecb36f3938daaee7.mp3str"
+
+[deps]
+
+source_file="res://Starlit Horizons.mp3"
+dest_files=["res://.godot/imported/Starlit Horizons.mp3-71919efaad5f4643ecb36f3938daaee7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

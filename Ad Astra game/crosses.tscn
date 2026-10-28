@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5a5qdqvw6085"]
+
+[ext_resource type="PackedScene" uid="uid://cthbxpiylsfbc" path="res://cross.tscn" id="1_185vl"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D2" parent="." instance=ExtResource("1_185vl")]
+position = Vector2(250, 0)
+
+[node name="Node2D3" parent="." instance=ExtResource("1_185vl")]
+position = Vector2(-250, 0)

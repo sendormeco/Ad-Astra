@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt7gxundvrv2x"]
+
+[ext_resource type="Texture2D" uid="uid://cm6hdytvamrde" path="res://effect_star.png" id="1_ypd6g"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kvmh1"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+scale_min = 0.2
+scale_max = 0.5
+
+[node name="star_effect" type="Node2D"]
+scale = Vector2(3, 3)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_kvmh1")
+texture = ExtResource("1_ypd6g")
+one_shot = true

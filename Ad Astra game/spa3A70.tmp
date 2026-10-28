@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://da7tull2u71om"]
+
+[ext_resource type="Script" path="res://space_race.gd" id="1_q5g6c"]
+[ext_resource type="Texture2D" uid="uid://cvvxqlrsa0jbg" path="res://main_menu_background.jpg" id="1_w1lm1"]
+[ext_resource type="Texture2D" uid="uid://beocf8lopgn8g" path="res://deep_space.png" id="2_2ms77"]
+[ext_resource type="PackedScene" uid="uid://bvwena3tiig3d" path="res://spaceship.tscn" id="3_ff6id"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="5_aajf4"]
+[ext_resource type="Script" path="res://background_controller.gd" id="6_5tuqu"]
+[ext_resource type="Texture2D" uid="uid://ctrlq1mveroos" path="res://white_pixel.jpg" id="6_i1o8o"]
+[ext_resource type="PackedScene" uid="uid://0m0iulhplpto" path="res://star.tscn" id="8_ml1tv"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_q5g6c")
+
+[node name="space" type="Sprite2D" parent="."]
+position = Vector2(-56, -62)
+scale = Vector2(0.994543, 0.995169)
+texture = ExtResource("2_2ms77")
+offset = Vector2(0, -1242)
+
+[node name="space2" type="Sprite2D" parent="."]
+position = Vector2(-56, 6)
+scale = Vector2(0.995134, 0.99517)
+texture = ExtResource("2_2ms77")
+offset = Vector2(0, -2484)
+
+[node name="moon_space" type="Sprite2D" parent="."]
+position = Vector2(-57, -67)
+scale = Vector2(0.994237, 0.99447)
+texture = ExtResource("1_w1lm1")
+
+[node name="space_ship" parent="." instance=ExtResource("3_ff6id")]
+position = Vector2(-17.5, 532)
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 431)
+offset = Vector2(0, -300)
+zoom = Vector2(0.8, 0.8)
+script = ExtResource("5_aajf4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-23.5, 859)
+scale = Vector2(1771, 454.923)
+texture = ExtResource("6_i1o8o")
+
+[node name="star_controller" type="Node2D" parent="."]
+script = ExtResource("6_5tuqu")
+star_scene = ExtResource("8_ml1tv")
+
+[node name="star" parent="star_controller" instance=ExtResource("8_ml1tv")]

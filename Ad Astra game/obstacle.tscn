@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=3 uid="uid://wvntq2cl0362"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_8sb1c"]
+[ext_resource type="Texture2D" uid="uid://c7dehrw7xqxfc" path="res://buttonBlue.png" id="2_7ogfw"]
+[ext_resource type="Texture2D" uid="uid://dlstbuf13tbkx" path="res://buttonGreen.png" id="3_6xm8x"]
+[ext_resource type="Texture2D" uid="uid://bcdsm3aa1rwsr" path="res://buttonRed.png" id="4_lk78d"]
+[ext_resource type="Texture2D" uid="uid://osykvha4cvao" path="res://buttonYellow.png" id="5_fp6xo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cq030"]
+size = Vector2(222, 39)
+
+[node name="Node2D" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_8sb1c")
+possible_sprites = Array[Texture2D]([ExtResource("2_7ogfw"), ExtResource("3_6xm8x"), ExtResource("4_lk78d"), ExtResource("5_fp6xo")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7ogfw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_cq030")

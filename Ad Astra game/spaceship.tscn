@@ -1,0 +1,123 @@
+[gd_scene load_steps=12 format=3 uid="uid://bvwena3tiig3d"]
+
+[ext_resource type="Script" path="res://spaceship.gd" id="1_f0jiq"]
+[ext_resource type="Texture2D" uid="uid://djigtkpc0bac3" path="res://light_01.png" id="2_i5wpj"]
+[ext_resource type="Texture2D" uid="uid://bshuxkh8jhq5t" path="res://spaceRockets_002.png" id="2_j024x"]
+[ext_resource type="Texture2D" uid="uid://bfiv2ivw8y3lb" path="res://muzzle_02.png" id="3_d8bru"]
+[ext_resource type="Texture2D" uid="uid://cor7ntr43y5pm" path="res://muzzle_04.png" id="4_bcypf"]
+[ext_resource type="AudioStream" uid="uid://d2j4on10uvmco" path="res://laserLarge_000.ogg" id="5_i6xas"]
+[ext_resource type="AudioStream" uid="uid://b8jbge4g6t20u" path="res://laserLarge_001.ogg" id="6_6ah5p"]
+[ext_resource type="Texture2D" uid="uid://daiv4yxk6f05a" path="res://googly-d.png" id="8_avou1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_smbq4"]
+radius = 33.0
+height = 304.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1uy8i"]
+radius = 64.0
+height = 128.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_es6ue"]
+radius = 4.0
+
+[node name="Node2D" type="CharacterBody2D" node_paths=PackedStringArray("ship_sprite", "ship_sprite2", "ship_sprite3", "ship_sprite4", "ship_sprite5", "magnet_area", "magnet_collision")]
+script = ExtResource("1_f0jiq")
+ship_sprite = NodePath("Sprite2D2")
+ship_sprite2 = NodePath("Sprite2D3")
+ship_sprite3 = NodePath("Sprite2D4")
+ship_sprite4 = NodePath("Sprite2D5")
+ship_sprite5 = NodePath("Sprite2D6")
+magnet_area = NodePath("Area2D")
+magnet_collision = NodePath("Area2D/CollisionShape2D")
+
+[node name="Trace" type="CPUParticles2D" parent="."]
+position = Vector2(1, 163)
+scale = Vector2(0.996032, 0.782978)
+amount = 1000
+lifetime = 6.0
+texture = ExtResource("2_i5wpj")
+gravity = Vector2(0, 0)
+scale_amount_min = 0.06
+scale_amount_max = 0.06
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_j024x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_smbq4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 90)
+shape = SubResource("CapsuleShape2D_1uy8i")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 0.283333, 0, 1)
+position = Vector2(75, 180)
+rotation = 2.79253
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_d8bru")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(1, 0.283333, 0, 1)
+position = Vector2(-75, 180)
+rotation = 3.49066
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_d8bru")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+modulate = Color(0.984314, 0.713726, 0, 1)
+position = Vector2(70, 165)
+rotation = 2.79253
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_d8bru")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.283333, 0, 1)
+position = Vector2(-1, 273.127)
+scale = Vector2(1.27222, 0.638827)
+texture = ExtResource("4_bcypf")
+flip_v = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D4"]
+self_modulate = Color(1, 0.716667, 0, 1)
+position = Vector2(-0.786041, -62.4893)
+scale = Vector2(0.755901, 0.755901)
+texture = ExtResource("4_bcypf")
+flip_v = true
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+modulate = Color(0.984314, 0.713726, 0, 1)
+position = Vector2(-69, 165)
+rotation = -2.87979
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_d8bru")
+
+[node name="thurst" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_i6xas")
+volume_db = -10.0
+bus = &"Sounds"
+
+[node name="lil_thurst" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_6ah5p")
+volume_db = -10.0
+bus = &"Sounds"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+light_mask = 15
+visibility_layer = 31
+shape = SubResource("CircleShape2D_es6ue")
+
+[node name="Eye" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-0.3125, 17.6981)
+scale = Vector2(0.137308, 0.137308)
+texture = ExtResource("8_avou1")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

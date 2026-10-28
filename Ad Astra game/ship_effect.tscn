@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvfuw3pevetvq"]
+
+[ext_resource type="Texture2D" uid="uid://6d0ewx1bnjd3" path="res://flame-64x.png" id="1_vw6my"]
+
+[node name="ship_sprite" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vw6my")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 63.5808)

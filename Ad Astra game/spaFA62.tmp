@@ -1,0 +1,81 @@
+[gd_scene load_steps=15 format=3 uid="uid://da7tull2u71om"]
+
+[ext_resource type="Script" path="res://space_race.gd" id="1_q5g6c"]
+[ext_resource type="Texture2D" uid="uid://cvvxqlrsa0jbg" path="res://main_menu_background.jpg" id="1_w1lm1"]
+[ext_resource type="Texture2D" uid="uid://beocf8lopgn8g" path="res://deep_space.png" id="2_2ms77"]
+[ext_resource type="PackedScene" uid="uid://bvwena3tiig3d" path="res://spaceship.tscn" id="3_ff6id"]
+[ext_resource type="Script" path="res://kvadrat.gd" id="4_fiqhh"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="5_aajf4"]
+[ext_resource type="Script" path="res://background_controller.gd" id="6_5tuqu"]
+[ext_resource type="Texture2D" uid="uid://clx0xha4ekc7y" path="res://planet03.png" id="7_q0oct"]
+[ext_resource type="PackedScene" uid="uid://0m0iulhplpto" path="res://star.tscn" id="8_ml1tv"]
+[ext_resource type="PackedScene" uid="uid://iaexx280vwhy" path="res://snake.tscn" id="9_6m1uc"]
+[ext_resource type="PackedScene" uid="uid://xgeyo6n38k41" path="res://we_are_rich.tscn" id="10_gfmqw"]
+[ext_resource type="PackedScene" uid="uid://b8icj44ct6j55" path="res://two_lines.tscn" id="11_awoa7"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1qq3g"]
+
+[sub_resource type="Gradient" id="Gradient_ubn4l"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(3.36915e-06, 0.562488, 0.815871, 1, 0, 0.444136, 0.898102, 1, 0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_q5g6c")
+
+[node name="space" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-56, -62)
+scale = Vector2(0.994543, 0.995169)
+texture = ExtResource("2_2ms77")
+offset = Vector2(0, -1242)
+
+[node name="space2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-56, 6)
+scale = Vector2(0.995134, 0.99517)
+texture = ExtResource("2_2ms77")
+offset = Vector2(0, -2484)
+
+[node name="moon_space" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-57, -67)
+scale = Vector2(0.994237, 0.99447)
+texture = ExtResource("1_w1lm1")
+
+[node name="KvadRat" type="Sprite2D" parent="."]
+position = Vector2(-6, 109)
+scale = Vector2(1920, 1024)
+texture = SubResource("CanvasTexture_1qq3g")
+script = ExtResource("4_fiqhh")
+max_height = 100000.0
+gradient = SubResource("Gradient_ubn4l")
+
+[node name="space_ship" parent="." instance=ExtResource("3_ff6id")]
+position = Vector2(0, 226)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 431)
+offset = Vector2(0, -300)
+zoom = Vector2(0.65, 0.65)
+script = ExtResource("5_aajf4")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Camera2D"]
+position = Vector2(-6, -322)
+remote_path = NodePath("../../KvadRat")
+update_rotation = false
+update_scale = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.246591, 0.695805, 0.273815, 1)
+position = Vector2(-2, 891)
+texture = ExtResource("7_q0oct")
+
+[node name="star_controller" type="Node2D" parent="."]
+script = ExtResource("6_5tuqu")
+snake_scene = ExtResource("9_6m1uc")
+we_are_rich_scene = ExtResource("10_gfmqw")
+two_lines_scene = ExtResource("11_awoa7")
+spawn_interval = 1.0
+
+[node name="star" parent="star_controller" instance=ExtResource("8_ml1tv")]
+top_level = false

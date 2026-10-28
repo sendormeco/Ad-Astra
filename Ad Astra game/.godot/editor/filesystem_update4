@@ -1,0 +1,12 @@
+res://space_race.tscn
+res://space_race.gdshader
+res://restart_menu.tscn
+res://budget_snake.tscn
+res://main_menu.tscn
+res://settings.tscn
+res://spaceship.tscn
+res://MobileControls.tscn
+res://star.tscn
+res://asteroid1.tscn
+res://tutorial.tscn
+res://loading_screen.tscn

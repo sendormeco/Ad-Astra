@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch4xl0n21e0id"]
+
+[ext_resource type="PackedScene" uid="uid://0m0iulhplpto" path="res://star.tscn" id="1_wdux8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="star" parent="." instance=ExtResource("1_wdux8")]
+
+[node name="star2" parent="." instance=ExtResource("1_wdux8")]
+position = Vector2(0, 200)
+
+[node name="star3" parent="." instance=ExtResource("1_wdux8")]
+position = Vector2(75, 100)

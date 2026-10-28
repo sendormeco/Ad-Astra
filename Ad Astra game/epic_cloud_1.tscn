@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6sg8j14dlhrl"]
+
+[ext_resource type="Texture2D" uid="uid://d15k64rhdfa4f" path="res://Clouds.png" id="1_08roj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_08roj")
+region_enabled = true
+region_rect = Rect2(0, 31.8117, 128, 33.9979)

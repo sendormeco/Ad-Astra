@@ -1,0 +1,152 @@
+[gd_scene load_steps=13 format=3 uid="uid://s10348rnrbia"]
+
+[ext_resource type="Script" path="res://quit.gd" id="1_ikfqb"]
+[ext_resource type="PackedScene" uid="uid://dh0cxb0glxid7" path="res://control_template.tscn" id="1_qx8bp"]
+[ext_resource type="Script" path="res://restart.gd" id="2_demxr"]
+[ext_resource type="Texture2D" uid="uid://d0kwx1nso8r3s" path="res://flatDark44.png" id="2_lwj5s"]
+[ext_resource type="Texture2D" uid="uid://bv0v0b6gj6hkc" path="res://sheet_black2x.png" id="4_u6pp4"]
+[ext_resource type="Texture2D" uid="uid://bsd3uf7y5j4aa" path="res://flatDark28.png" id="5_8fljk"]
+[ext_resource type="Texture2D" uid="uid://cehhq75focqyj" path="res://flatDark27.png" id="7_6rt2e"]
+[ext_resource type="Script" path="res://resume.gd" id="8_uolm8"]
+[ext_resource type="FontFile" uid="uid://ub8x6j61hkcb" path="res://Bowler.ttf" id="8_xbww8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_psbnu"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ct47q"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_s1bk4"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 356.0
+offset_bottom = 220.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Control" parent="." instance=ExtResource("1_qx8bp")]
+layout_mode = 1
+offset_left = -369.0
+offset_right = -369.0
+
+[node name="restart_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -52.0
+offset_top = 230.0
+offset_right = 36.0
+offset_bottom = 318.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("2_lwj5s")
+script = ExtResource("2_demxr")
+
+[node name="ColorRect" type="ColorRect" parent="restart_button"]
+layout_mode = 0
+offset_left = -126.0
+offset_top = -119.0
+offset_right = 217.0
+offset_bottom = -44.0
+color = Color(0.588235, 0.588235, 0.639216, 1)
+
+[node name="TextureRect" type="TextureRect" parent="restart_button"]
+modulate = Color(0.854902, 0.862745, 0.905882, 1)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 95.0
+offset_bottom = 95.0
+texture = SubResource("CanvasTexture_psbnu")
+
+[node name="TextureRect2" type="Sprite2D" parent="restart_button"]
+position = Vector2(46, 43.3333)
+texture = ExtResource("4_u6pp4")
+region_enabled = true
+region_rect = Rect2(111.372, 1210.64, 88.109, 92.207)
+
+[node name="exit_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 230.0
+offset_right = 316.0
+offset_bottom = 318.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("5_8fljk")
+script = ExtResource("1_ikfqb")
+
+[node name="TextureRect" type="TextureRect" parent="exit_button"]
+modulate = Color(0.854902, 0.862745, 0.905882, 1)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 95.0
+offset_bottom = 95.0
+texture = SubResource("CanvasTexture_ct47q")
+
+[node name="TextureRect" type="Sprite2D" parent="exit_button/TextureRect"]
+position = Vector2(47.6667, 49)
+texture = ExtResource("4_u6pp4")
+region_enabled = true
+region_rect = Rect2(305.081, 1216.96, 91.8966, 84.4456)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -332.0
+offset_top = 230.0
+offset_right = -244.0
+offset_bottom = 318.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("7_6rt2e")
+script = ExtResource("8_uolm8")
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+modulate = Color(0.854902, 0.862745, 0.905882, 1)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 95.0
+offset_bottom = 95.0
+texture = SubResource("CanvasTexture_s1bk4")
+
+[node name="TextureRect2" type="Sprite2D" parent="Button"]
+position = Vector2(46.6667, 44.6667)
+texture = ExtResource("4_u6pp4")
+region_enabled = true
+region_rect = Rect2(116.121, 1012.32, 64.576, 79.4781)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -160.0
+offset_top = 75.0
+offset_right = 165.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_xbww8")
+theme_override_font_sizes/font_size = 80
+text = "ПАУЗА"
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -249.0
+offset_top = 29.0
+offset_right = 276.0
+offset_bottom = 32.0
+
+[node name="ColorRect8" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -241.0
+offset_top = 25.0
+offset_right = 271.0
+offset_bottom = 29.0
+color = Color(0.588235, 0.588235, 0.639216, 1)
+
+[connection signal="pressed" from="restart_button" to="restart_button" method="_on_pressed"]
+[connection signal="pressed" from="exit_button" to="exit_button" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

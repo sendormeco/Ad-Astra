@@ -1,0 +1,803 @@
+[gd_scene load_steps=75 format=3 uid="uid://da7tull2u71om"]
+
+[ext_resource type="Script" path="res://space_race.gd" id="1_q5g6c"]
+[ext_resource type="PackedScene" uid="uid://clfghf7i4njg4" path="res://snakes.tscn" id="3_25m3a"]
+[ext_resource type="PackedScene" uid="uid://bvwena3tiig3d" path="res://spaceship.tscn" id="3_ff6id"]
+[ext_resource type="Script" path="res://kvadrat.gd" id="4_fiqhh"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="5_aajf4"]
+[ext_resource type="Gradient" uid="uid://bop2x1xtad3r5" path="res://gradient.tres" id="5_jffnd"]
+[ext_resource type="Script" path="res://background_controller.gd" id="6_5tuqu"]
+[ext_resource type="PackedScene" uid="uid://ctaph253ylk78" path="res://we_are_poor.tscn" id="6_i4cyk"]
+[ext_resource type="PackedScene" uid="uid://bmfeskx3fk1fh" path="res://budget_snakeS.tscn" id="7_ae0pq"]
+[ext_resource type="Texture2D" uid="uid://bkfbowvmxy2po" path="res://groundLayer1.png" id="7_ikpkl"]
+[ext_resource type="PackedScene" uid="uid://d2fhsyctpu1ws" path="res://uparrow.tscn" id="8_g0iny"]
+[ext_resource type="Texture2D" uid="uid://dud20tion1lnp" path="res://backgroundColorGrass.png" id="8_lahug"]
+[ext_resource type="PackedScene" uid="uid://0m0iulhplpto" path="res://star.tscn" id="8_ml1tv"]
+[ext_resource type="Script" path="res://cloud_controller.gd" id="8_usy7c"]
+[ext_resource type="PackedScene" uid="uid://ycdyi6yw3w37" path="res://cloud.tscn" id="9_b5y8l"]
+[ext_resource type="PackedScene" uid="uid://b5a5qdqvw6085" path="res://crosses.tscn" id="9_yo3kv"]
+[ext_resource type="PackedScene" uid="uid://xgeyo6n38k41" path="res://we_are_rich.tscn" id="10_gfmqw"]
+[ext_resource type="PackedScene" uid="uid://hdfu5fve2qv0" path="res://cloud2.tscn" id="10_limyj"]
+[ext_resource type="PackedScene" uid="uid://b8icj44ct6j55" path="res://two_lines.tscn" id="11_awoa7"]
+[ext_resource type="PackedScene" uid="uid://t4h1pk6yf4rd" path="res://big_cloud.tscn" id="11_bxiqd"]
+[ext_resource type="Script" path="res://color_rect.gd" id="17_c2q30"]
+[ext_resource type="Texture2D" uid="uid://c5ax0tc27hqmn" path="res://cloudLayer1.png" id="18_6rpcy"]
+[ext_resource type="Texture2D" uid="uid://bv2mos6dsemep" path="res://moon.png" id="18_p4jk8"]
+[ext_resource type="Texture2D" uid="uid://cr7vfuela5o53" path="res://cloudLayerB1.png" id="19_lv6pe"]
+[ext_resource type="Script" path="res://BFcloud.gd" id="19_vqabt"]
+[ext_resource type="Texture2D" uid="uid://cppe01r7grvvl" path="res://planet00.png" id="23_ppeyo"]
+[ext_resource type="Texture2D" uid="uid://c32vopfmsgt6x" path="res://bar_round_gloss_small_l.png" id="23_tg72x"]
+[ext_resource type="Texture2D" uid="uid://csiw1jose2g08" path="res://planet09.png" id="24_0vxhl"]
+[ext_resource type="Texture2D" uid="uid://cpv2yq4ak6jxx" path="res://bar_round_gloss_small_m.png" id="24_vmhco"]
+[ext_resource type="Texture2D" uid="uid://doj852l8smbyj" path="res://bar_round_gloss_small_r.png" id="25_8ic4l"]
+[ext_resource type="Script" path="res://sound_button.gd" id="26_f1ybx"]
+[ext_resource type="Texture2D" uid="uid://bbi0penhpexn6" path="res://ship_D.png" id="27_5eomc"]
+[ext_resource type="PackedScene" uid="uid://s10348rnrbia" path="res://pause_menu.tscn" id="28_clvbd"]
+[ext_resource type="Script" path="res://pause_button.gd" id="28_nsx6e"]
+[ext_resource type="Texture2D" uid="uid://dmdwvgc1nxdta" path="res://flatDark17.png" id="29_8no02"]
+[ext_resource type="Texture2D" uid="uid://b5adf4fomgus4" path="res://moonFull.png" id="30_k51oe"]
+[ext_resource type="Script" path="res://moon.gd" id="31_huyyw"]
+[ext_resource type="PackedScene" uid="uid://cv1p4pkmf20nd" path="res://satellite1.tscn" id="32_vlbr1"]
+[ext_resource type="PackedScene" uid="uid://1tmc313wovw6" path="res://satellite_2.tscn" id="33_mqd2g"]
+[ext_resource type="PackedScene" uid="uid://dcqebp6mn2vbe" path="res://satellite_3.tscn" id="34_wlfu5"]
+[ext_resource type="PackedScene" uid="uid://mnfe70xbiaid" path="res://satellite_4.tscn" id="35_b2v5d"]
+[ext_resource type="PackedScene" uid="uid://camwpy2e3fa27" path="res://satellite_5.tscn" id="36_emx7y"]
+[ext_resource type="PackedScene" uid="uid://bos7nd62yt04" path="res://asteroid1.tscn" id="37_2ups5"]
+[ext_resource type="PackedScene" uid="uid://cxf5mnagm7koo" path="res://satellite6.tscn" id="37_3pjcb"]
+[ext_resource type="Script" path="res://asteroid_spawner.gd" id="38_8jbwl"]
+[ext_resource type="PackedScene" uid="uid://b3bicggnc55th" path="res://cloud_4.tscn" id="38_ww8oa"]
+[ext_resource type="PackedScene" uid="uid://bwcvok1lsrv83" path="res://asteroid_2.tscn" id="39_c7i8l"]
+[ext_resource type="PackedScene" uid="uid://qjyuwu5153au" path="res://cloud_5.tscn" id="39_htqed"]
+[ext_resource type="PackedScene" uid="uid://cnb833l6wbc6l" path="res://asteroid_3.tscn" id="40_gg2at"]
+[ext_resource type="PackedScene" uid="uid://d3hfua76yk2if" path="res://cloud_6.tscn" id="40_o3ql5"]
+[ext_resource type="PackedScene" uid="uid://bvqnpbxtque4l" path="res://cloud_7.tscn" id="41_asobr"]
+[ext_resource type="PackedScene" uid="uid://bbpkmi37xyd66" path="res://asteroid_4.tscn" id="41_dnkap"]
+[ext_resource type="AudioStream" uid="uid://bqyqepngl14te" path="res://Stellar Quest.mp3" id="42_yg0br"]
+[ext_resource type="PackedScene" uid="uid://ksw4bi5lq0g1" path="res://grey_meteor1.tscn" id="48_qnphu"]
+[ext_resource type="PackedScene" uid="uid://bpr4dapphbdxn" path="res://grey_meteor_2.tscn" id="49_fvky0"]
+[ext_resource type="PackedScene" uid="uid://crjtq3auv1fsk" path="res://grey_meteor_3.tscn" id="50_88n45"]
+[ext_resource type="PackedScene" uid="uid://dgrod0tlbdj2l" path="res://grey_meteor_4.tscn" id="51_6fvl1"]
+[ext_resource type="Script" path="res://rainbow.gd" id="51_n41tu"]
+[ext_resource type="Texture2D" uid="uid://bb3jgxm2tg40e" path="res://pngwing.com.png" id="54_mljdd"]
+[ext_resource type="Texture2D" uid="uid://tbu4bfn6n8a2" path="res://bar_square_large2.png" id="55_wdkw7"]
+[ext_resource type="Texture2D" uid="uid://bv0v0b6gj6hkc" path="res://sheet_black2x.png" id="61_ujndl"]
+[ext_resource type="Script" path="res://fuel_label.gd" id="64_lcf6x"]
+[ext_resource type="PackedScene" uid="uid://dngjcosj50ptx" path="res://score_holder.tscn" id="64_t4qsa"]
+[ext_resource type="Script" path="res://pause_menu.gd" id="64_taylo"]
+[ext_resource type="FontFile" uid="uid://ub8x6j61hkcb" path="res://Bowler.ttf" id="65_q0o5v"]
+[ext_resource type="PackedScene" uid="uid://b6cahqom7km1n" path="res://restart_menu.tscn" id="66_454h6"]
+[ext_resource type="Texture2D" uid="uid://bqd0lw8npvofo" path="res://star (1).png" id="66_pn031"]
+[ext_resource type="PackedScene" uid="uid://b6mgv8tnc6hd5" path="res://star_counter.tscn" id="67_wrt46"]
+[ext_resource type="Script" path="res://restart_menu.gd" id="68_cnjyr"]
+[ext_resource type="Texture2D" uid="uid://cy458eo42gfxn" path="res://button_rectangle_depth.png" id="69_l1lmq"]
+[ext_resource type="Script" path="res://upgrade_button_1.gd" id="71_kwxk3"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1qq3g"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nsqp2"]
+gradient = ExtResource("5_jffnd")
+width = 50
+height = 1000
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_6m0vj"]
+
+[node name="Game" type="Node2D" node_paths=PackedStringArray("fuel_upgrade_label", "engine_upgrade_label", "control_upgrade_label", "armor_upgrade_label", "magnet_upgrade_label", "pause_menu", "rocket", "score_label", "high_score_label", "stars_label", "restart_stars_label", "restart_score_label", "restart_high_score_label", "combo_label", "restart_menu", "fuel_label")]
+position = Vector2(0, -1989)
+script = ExtResource("1_q5g6c")
+fuel_upgrade_label = NodePath("fuel_upgrade_button/fue_upgrade_price")
+engine_upgrade_label = NodePath("engine_upgrade_button/engine_upgrade_price")
+control_upgrade_label = NodePath("control_upgrade_button/control_upgrade_price")
+armor_upgrade_label = NodePath("armor_upgrade_button/engine_upgrade_price")
+magnet_upgrade_label = NodePath("magnet_upgrade_button/magnet_upgrade_price")
+pause_menu = NodePath("Camera2D/PauseMenu")
+rocket = NodePath("space_ship")
+score_label = NodePath("Camera2D/score_label")
+high_score_label = NodePath("Camera2D/high_score_label")
+stars_label = NodePath("Camera2D/stars_label")
+restart_stars_label = NodePath("Camera2D/RestartMenu/stars")
+restart_score_label = NodePath("Camera2D/RestartMenu/score")
+restart_high_score_label = NodePath("Camera2D/RestartMenu/high_score")
+combo_label = NodePath("Camera2D/combo_label")
+restart_menu = NodePath("Camera2D/RestartMenu")
+fuel_label = NodePath("Camera2D/fuel_label")
+
+[node name="space" type="Sprite2D" parent="."]
+position = Vector2(8, 3203)
+texture = ExtResource("8_lahug")
+offset = Vector2(0, -3000)
+
+[node name="KvadRat" type="Sprite2D" parent="."]
+position = Vector2(-6, 109)
+scale = Vector2(10000, 5333.33)
+texture = SubResource("CanvasTexture_1qq3g")
+script = ExtResource("4_fiqhh")
+max_height = 200000.0
+gradient = ExtResource("5_jffnd")
+start_height = 20000.0
+
+[node name="star_controller" type="Node2D" parent="." node_paths=PackedStringArray("kvadrat", "true_rocket", "camera")]
+script = ExtResource("6_5tuqu")
+kvadrat = NodePath("../KvadRat")
+snakes_scene = ExtResource("3_25m3a")
+we_are_rich_scene = ExtResource("10_gfmqw")
+two_lines_scene = ExtResource("11_awoa7")
+we_are_poor = ExtResource("6_i4cyk")
+budget_snakes = ExtResource("7_ae0pq")
+single_line = ExtResource("11_awoa7")
+true_rocket = NodePath("../space_ship")
+up_arrow = ExtResource("8_g0iny")
+crosses = ExtResource("9_yo3kv")
+camera = NodePath("../Camera2D")
+
+[node name="star" parent="star_controller" instance=ExtResource("8_ml1tv")]
+top_level = false
+position = Vector2(0, -2489)
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(1468, -2)
+scale = Vector2(3, 3)
+texture = ExtResource("18_6rpcy")
+script = ExtResource("19_vqabt")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(-1387, -1)
+scale = Vector2(3, 3)
+texture = ExtResource("19_lv6pe")
+script = ExtResource("19_vqabt")
+
+[node name="asteroid_spawner" type="Node2D" parent="." node_paths=PackedStringArray("kvadrat", "camera")]
+script = ExtResource("38_8jbwl")
+kvadrat = NodePath("../KvadRat")
+camera = NodePath("../Camera2D")
+grey_asteroid_scenes = Array[PackedScene]([ExtResource("48_qnphu"), ExtResource("49_fvky0"), ExtResource("50_88n45"), ExtResource("51_6fvl1")])
+asteroid_scenes = Array[PackedScene]([ExtResource("37_2ups5"), ExtResource("39_c7i8l"), ExtResource("40_gg2at"), ExtResource("41_dnkap")])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("42_yg0br")
+volume_db = -25.0
+autoplay = true
+parameters/looping = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -2681.0
+offset_top = 1410.0
+offset_right = 2517.0
+offset_bottom = 2434.0
+texture = ExtResource("8_lahug")
+stretch_mode = 1
+
+[node name="rainbow" type="Sprite2D" parent="."]
+position = Vector2(-1, 1642)
+scale = Vector2(4.06854, 4.06854)
+texture = ExtResource("54_mljdd")
+script = ExtResource("51_n41tu")
+
+[node name="space_ship" parent="." node_paths=PackedStringArray("pause_button", "sound_button", "white_screen") instance=ExtResource("3_ff6id")]
+position = Vector2(0, 1803)
+pause_button = NodePath("../Camera2D/PauseButton")
+sound_button = NodePath("../Camera2D/SoundButton")
+white_screen = NodePath("../Camera2D/ColorRect2")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0.137255, 0.74902, 0.462745, 1)
+offset_left = -2718.0
+offset_top = 2176.0
+offset_right = 2476.0
+offset_bottom = 3006.0
+texture = ExtResource("7_ikpkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1973)
+scale = Vector2(2, 2)
+texture = ExtResource("55_wdkw7")
+
+[node name="cloud_controller" type="Node2D" parent="." node_paths=PackedStringArray("kvadrat", "rocket")]
+script = ExtResource("8_usy7c")
+kvadrat = NodePath("../KvadRat")
+max_satellites_per_level = 1
+satellite_scene_1 = ExtResource("32_vlbr1")
+satellite_scene_2 = ExtResource("33_mqd2g")
+satellite_scene_3 = ExtResource("34_wlfu5")
+satellite_scene_4 = ExtResource("35_b2v5d")
+satellite_scene_5 = ExtResource("36_emx7y")
+satellite_scene_6 = ExtResource("37_3pjcb")
+rocket = NodePath("../space_ship")
+cloud_scene_1 = ExtResource("9_b5y8l")
+cloud_scene_2 = ExtResource("10_limyj")
+cloud_scene_3 = ExtResource("11_bxiqd")
+cloud_scene_4 = ExtResource("38_ww8oa")
+cloud_scene_5 = ExtResource("39_htqed")
+cloud_scene_6 = ExtResource("40_o3ql5")
+cloud_scene_7 = ExtResource("41_asobr")
+max_clouds_per_level = 3
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 431)
+offset = Vector2(0, -300)
+zoom = Vector2(0.4, 0.4)
+script = ExtResource("5_aajf4")
+
+[node name="Moon" type="Sprite2D" parent="Camera2D" node_paths=PackedStringArray("kvadrat", "rocket")]
+position = Vector2(1800, -1300)
+scale = Vector2(1.7, 1.7)
+script = ExtResource("31_huyyw")
+kvadrat = NodePath("../../KvadRat")
+rocket = NodePath("../../space_ship")
+moon_sprites = Array[Texture]([ExtResource("18_p4jk8"), ExtResource("30_k51oe")])
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Camera2D"]
+position = Vector2(-6, -322)
+remote_path = NodePath("../../KvadRat")
+update_rotation = false
+update_scale = false
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+visible = false
+offset_left = -777.0
+offset_top = 770.0
+offset_right = -714.0
+offset_bottom = 1767.0
+color = Color(0.59, 0.59, 0.59, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Camera2D"]
+visible = false
+offset_left = -771.0
+offset_top = 764.0
+offset_right = -721.0
+offset_bottom = 1565.0
+scale = Vector2(1, 1.00098)
+fill_mode = 3
+texture_under = SubResource("GradientTexture2D_nsqp2")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Camera2D/TextureProgressBar"]
+position = Vector2(25, 1004.01)
+scale = Vector2(0.06, 0.063)
+texture = ExtResource("23_ppeyo")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Camera2D/TextureProgressBar"]
+modulate = Color(0.621428, 0.741367, 0.365984, 1)
+position = Vector2(25, 5)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("24_0vxhl")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Camera2D/TextureProgressBar"]
+visible = false
+position = Vector2(52, 704)
+scale = Vector2(0.346107, 0.389368)
+texture = ExtResource("25_8ic4l")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Camera2D/TextureProgressBar"]
+visible = false
+position = Vector2(-2.47113, -2.9664)
+scale = Vector2(0.38222, 0.379196)
+texture = ExtResource("23_tg72x")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Camera2D/TextureProgressBar"]
+visible = false
+position = Vector2(24.9591, -2.96021)
+scale = Vector2(3.25511, 0.374227)
+texture = ExtResource("24_vmhco")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Camera2D/TextureProgressBar"]
+visible = false
+position = Vector2(52, -3.00001)
+scale = Vector2(0.346107, 0.375004)
+texture = ExtResource("25_8ic4l")
+
+[node name="RocketIndicator" type="TextureRect" parent="Camera2D"]
+visible = false
+self_modulate = Color(0.883049, 0, 0.0791341, 1)
+offset_left = -778.0
+offset_top = 1504.0
+offset_right = -714.0
+offset_bottom = 1568.0
+texture = ExtResource("27_5eomc")
+
+[node name="Sprite2D" type="Button" parent="Camera2D"]
+visible = false
+offset_left = 1125.0
+offset_top = -1110.0
+offset_right = 1230.0
+offset_bottom = -1005.0
+icon = ExtResource("29_8no02")
+expand_icon = true
+
+[node name="high_score_label" type="RichTextLabel" parent="Camera2D"]
+visible = false
+offset_left = 1815.0
+offset_top = -1351.0
+offset_right = 2396.0
+offset_bottom = -1264.0
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.793374, 0.000182704, 0.700512, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/normal_font_size = 80
+text = "dmitry"
+tab_size = 16
+
+[node name="Control" parent="Camera2D" instance=ExtResource("67_wrt46")]
+offset_left = -1291.0
+offset_top = -1458.0
+offset_right = -1291.0
+offset_bottom = -1458.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Camera2D/Control"]
+position = Vector2(703.333, 64.6686)
+rotation = -3.14159
+scale = Vector2(0.533333, 0.533333)
+texture = ExtResource("66_pn031")
+
+[node name="Control2" parent="Camera2D" instance=ExtResource("64_t4qsa")]
+offset_left = -2404.0
+offset_top = -1494.0
+offset_right = -2404.0
+offset_bottom = -1494.0
+scale = Vector2(1.5, 1.5)
+
+[node name="score_label" type="RichTextLabel" parent="Camera2D"]
+offset_left = -2385.0
+offset_top = -1437.0
+offset_right = -1759.0
+offset_bottom = -1334.0
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 100
+theme_override_font_sizes/bold_font_size = 10
+text = "hi"
+tab_size = 16
+
+[node name="combo_label" type="Label" parent="Camera2D"]
+offset_left = -1432.0
+offset_top = -1652.0
+offset_right = -873.0
+offset_bottom = -1334.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("65_q0o5v")
+theme_override_font_sizes/font_size = 300
+text = "X2"
+
+[node name="fuel_label" type="RichTextLabel" parent="Camera2D"]
+offset_left = -1400.0
+offset_top = 187.0
+offset_right = -480.0
+offset_bottom = 710.0
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 200
+theme_override_font_sizes/bold_font_size = 10
+text = "hi"
+tab_size = 16
+script = ExtResource("64_lcf6x")
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D" node_paths=PackedStringArray("camera")]
+visible = false
+offset_left = -3130.0
+offset_top = -2351.0
+offset_right = 3220.0
+offset_bottom = 1366.0
+script = ExtResource("17_c2q30")
+camera = NodePath("..")
+
+[node name="SoundButton" type="Button" parent="Camera2D" node_paths=PackedStringArray("camera")]
+offset_left = 2339.0
+offset_top = -1547.0
+offset_right = 2444.0
+offset_bottom = -1442.0
+expand_icon = true
+script = ExtResource("26_f1ybx")
+camera = NodePath("..")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/SoundButton"]
+position = Vector2(52.25, 52.25)
+scale = Vector2(0.976636, 1.02475)
+texture = ExtResource("61_ujndl")
+region_enabled = true
+region_rect = Rect2(397.84, 1906.21, 107.69, 101.64)
+
+[node name="PauseButton" type="Button" parent="Camera2D" node_paths=PackedStringArray("camera", "main")]
+offset_left = 2339.0
+offset_top = -1652.0
+offset_right = 2444.0
+offset_bottom = -1547.0
+expand_icon = true
+script = ExtResource("28_nsx6e")
+camera = NodePath("..")
+main = NodePath("../..")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/PauseButton"]
+position = Vector2(52.5, 52.5001)
+scale = Vector2(1.69644, 1.46154)
+texture = ExtResource("61_ujndl")
+region_enabled = true
+region_rect = Rect2(121.439, 1815.69, 56.946, 65.2603)
+
+[node name="RestartMenu" parent="Camera2D" node_paths=PackedStringArray("camera") instance=ExtResource("66_454h6")]
+visible = false
+offset_left = -553.0
+offset_top = -527.0
+offset_right = -553.0
+offset_bottom = -527.0
+scale = Vector2(1.5, 1.5)
+script = ExtResource("68_cnjyr")
+camera = NodePath("..")
+
+[node name="stars" type="Label" parent="Camera2D/RestartMenu"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 49.0
+offset_right = 734.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_fonts/font = ExtResource("65_q0o5v")
+theme_override_font_sizes/font_size = 50
+text = "123"
+
+[node name="score" type="Label" parent="Camera2D/RestartMenu"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 109.0
+offset_right = 734.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_fonts/font = ExtResource("65_q0o5v")
+theme_override_font_sizes/font_size = 50
+text = "123"
+
+[node name="high_score" type="Label" parent="Camera2D/RestartMenu"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 169.0
+offset_right = 730.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_fonts/font = ExtResource("65_q0o5v")
+theme_override_font_sizes/font_size = 50
+text = "123"
+
+[node name="stars_label" type="RichTextLabel" parent="Camera2D"]
+offset_left = -2251.0
+offset_top = -1609.0
+offset_right = -1467.0
+offset_bottom = -1467.0
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/normal_font_size = 100
+theme_override_font_sizes/bold_font_size = 100
+text = "sdf"
+
+[node name="PauseMenu" parent="Camera2D" node_paths=PackedStringArray("camera") instance=ExtResource("28_clvbd")]
+offset_top = -527.0
+offset_bottom = -527.0
+scale = Vector2(1.5, 1.5)
+script = ExtResource("64_taylo")
+camera = NodePath("..")
+
+[node name="fuel_upgrade_button" type="Button" parent="." node_paths=PackedStringArray("game")]
+offset_left = -2092.0
+offset_top = 2407.0
+offset_right = -1700.0
+offset_bottom = 2543.0
+scale = Vector2(1.5, 1.5)
+theme = SubResource("Theme_6m0vj")
+icon = ExtResource("69_l1lmq")
+script = ExtResource("71_kwxk3")
+game = NodePath("..")
+
+[node name="fuel_upgrade" type="RichTextLabel" parent="fuel_upgrade_button"]
+layout_mode = 0
+offset_left = 118.667
+offset_top = 13.0
+offset_right = 273.667
+offset_bottom = 74.0
+mouse_filter = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 10
+text = "Fuel"
+tab_size = 16
+
+[node name="fue_upgrade_price" type="RichTextLabel" parent="fuel_upgrade_button"]
+layout_mode = 0
+offset_left = 119.333
+offset_top = 63.3333
+offset_right = 478.333
+offset_bottom = 125.333
+mouse_filter = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(1, 0.831373, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 10
+text = "fuel price"
+tab_size = 16
+
+[node name="magnet_upgrade_button" type="Button" parent="."]
+offset_left = 1508.0
+offset_top = 2407.0
+offset_right = 1900.0
+offset_bottom = 2543.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("69_l1lmq")
+
+[node name="magnet_upgrade" type="RichTextLabel" parent="magnet_upgrade_button"]
+layout_mode = 0
+offset_left = 71.3333
+offset_top = 13.0
+offset_right = 343.333
+offset_bottom = 74.0
+mouse_filter = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 10
+text = "magnet"
+tab_size = 16
+
+[node name="magnet_upgrade_price" type="RichTextLabel" parent="magnet_upgrade_button"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 61.3333
+offset_right = 518.0
+offset_bottom = 123.333
+mouse_filter = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(1, 0.831373, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 10
+text = "magnet price"
+tab_size = 16
+
+[node name="engine_upgrade_button" type="Button" parent="."]
+offset_left = -1092.0
+offset_top = 2507.0
+offset_right = -700.0
+offset_bottom = 2643.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("69_l1lmq")
+
+[node name="engine_upgrade" type="RichTextLabel" parent="engine_upgrade_button"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 13.0
+offset_right = 307.0
+offset_bottom = 74.0
+mouse_filter = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 10
+text = "engine"
+tab_size = 16
+
+[node name="engine_upgrade_price" type="RichTextLabel" parent="engine_upgrade_button"]
+layout_mode = 0
+offset_left = 95.3333
+offset_top = 64.0
+offset_right = 478.333
+offset_bottom = 126.0
+mouse_filter = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(1, 0.831373, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 10
+text = "engine price"
+tab_size = 16
+
+[node name="control_upgrade_button" type="Button" parent="."]
+offset_left = 508.0
+offset_top = 2507.0
+offset_right = 900.0
+offset_bottom = 2643.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("69_l1lmq")
+
+[node name="control_upgrade" type="RichTextLabel" parent="control_upgrade_button"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 13.0
+offset_right = 359.0
+offset_bottom = 74.0
+mouse_filter = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 10
+text = "Control"
+tab_size = 16
+
+[node name="control_upgrade_price" type="RichTextLabel" parent="control_upgrade_button"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 63.3333
+offset_right = 552.0
+offset_bottom = 125.333
+mouse_filter = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(1, 0.831373, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 10
+text = "control price"
+tab_size = 16
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="armor_upgrade_button" type="Button" parent="."]
+offset_left = -284.0
+offset_top = 2307.0
+offset_right = 108.0
+offset_bottom = 2443.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("69_l1lmq")
+
+[node name="engine_upgrade" type="RichTextLabel" parent="armor_upgrade_button"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 13.0
+offset_right = 307.0
+offset_bottom = 74.0
+mouse_filter = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 10
+text = "armor"
+tab_size = 16
+
+[node name="engine_upgrade_price" type="RichTextLabel" parent="armor_upgrade_button"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 64.0
+offset_right = 505.0
+offset_bottom = 126.0
+mouse_filter = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(1, 0.831373, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("65_q0o5v")
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 10
+text = "armor price"
+tab_size = 16
+
+[connection signal="pressed" from="Camera2D/PauseButton" to="Camera2D/PauseButton" method="_on_pressed"]
+[connection signal="pressed" from="fuel_upgrade_button" to="." method="_on_fuel_upgrade_button_pressed"]
+[connection signal="pressed" from="magnet_upgrade_button" to="." method="_on_magnet_upgrade_button_pressed"]
+[connection signal="pressed" from="engine_upgrade_button" to="." method="_on_engine_upgrade_button_pressed"]
+[connection signal="pressed" from="control_upgrade_button" to="." method="_on_control_upgrade_button_pressed"]
+[connection signal="pressed" from="armor_upgrade_button" to="." method="_on_armor_upgrade_button_pressed"]

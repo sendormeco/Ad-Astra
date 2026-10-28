@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxefqu53f2xph"]
+
+[ext_resource type="PackedScene" uid="uid://0m0iulhplpto" path="res://star.tscn" id="1_5r4su"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="star2" parent="." instance=ExtResource("1_5r4su")]
+
+[node name="star4" parent="." instance=ExtResource("1_5r4su")]
+position = Vector2(-100, 0)
+
+[node name="star5" parent="." instance=ExtResource("1_5r4su")]
+position = Vector2(100, 0)
+
+[node name="star6" parent="." instance=ExtResource("1_5r4su")]
+position = Vector2(200, 0)
+
+[node name="star7" parent="." instance=ExtResource("1_5r4su")]
+position = Vector2(-200, 0)
+
+[node name="star8" parent="." instance=ExtResource("1_5r4su")]
+position = Vector2(300, 0)
+
+[node name="star9" parent="." instance=ExtResource("1_5r4su")]
+position = Vector2(-300, 0)

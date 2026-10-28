@@ -1,0 +1,267 @@
+[gd_scene load_steps=27 format=3 uid="uid://b7aj22byxc3l8"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_w4nh2"]
+[ext_resource type="FontFile" uid="uid://ub8x6j61hkcb" path="res://Bowler.ttf" id="2_kpk5a"]
+[ext_resource type="Texture2D" uid="uid://bb6xduoh1njkm" path="res://cloud4.png" id="6_j2qos"]
+[ext_resource type="Texture2D" uid="uid://cy458eo42gfxn" path="res://button_rectangle_depth.png" id="6_t5qwv"]
+[ext_resource type="AudioStream" uid="uid://qxxmmnsge53p" path="res://Stellar Drift.mp3" id="7_hny25"]
+[ext_resource type="Texture2D" uid="uid://c5ax0tc27hqmn" path="res://cloudLayer1.png" id="7_x7m8s"]
+[ext_resource type="Script" path="res://cloud_controller_main_menu.gd" id="9_8njsr"]
+[ext_resource type="PackedScene" uid="uid://ycdyi6yw3w37" path="res://cloud.tscn" id="10_lsvkk"]
+[ext_resource type="Script" path="res://start_button.gd" id="11_q5lkh"]
+[ext_resource type="PackedScene" uid="uid://hdfu5fve2qv0" path="res://cloud2.tscn" id="11_vtw6h"]
+[ext_resource type="PackedScene" uid="uid://b3bicggnc55th" path="res://cloud_4.tscn" id="12_dl0g1"]
+[ext_resource type="Texture2D" uid="uid://uff0gopofw3p" path="res://icon_play_dark.png" id="12_viitg"]
+[ext_resource type="PackedScene" uid="uid://qjyuwu5153au" path="res://cloud_5.tscn" id="13_mrmfg"]
+[ext_resource type="Script" path="res://cloud1.gd" id="14_1guh3"]
+[ext_resource type="PackedScene" uid="uid://d3hfua76yk2if" path="res://cloud_6.tscn" id="14_dvhqp"]
+[ext_resource type="PackedScene" uid="uid://bvqnpbxtque4l" path="res://cloud_7.tscn" id="15_m4o4l"]
+[ext_resource type="Script" path="res://camera_2d_main_menu.gd" id="17_vnjl6"]
+[ext_resource type="Script" path="res://settings_button.gd" id="18_4cnkt"]
+[ext_resource type="Script" path="res://exit_button.gd" id="19_b4bhl"]
+[ext_resource type="Texture2D" uid="uid://bv0v0b6gj6hkc" path="res://sheet_black2x.png" id="19_luk8r"]
+[ext_resource type="Texture2D" uid="uid://b7pokf8xqbasl" path="res://gear.png" id="19_mb6bg"]
+[ext_resource type="Script" path="res://records_button.gd" id="20_1jelc"]
+[ext_resource type="Texture2D" uid="uid://wcdimehuctjm" path="res://trophy.png" id="20_iqv2x"]
+[ext_resource type="Texture2D" uid="uid://ck3f8nitsne61" path="res://button_square_depth.png" id="23_s4hn5"]
+[ext_resource type="Script" path="res://tutorial_button.gd" id="25_fjttj"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_sbeoa"]
+
+[node name="main_menu" type="CanvasLayer"]
+script = ExtResource("1_w4nh2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.815686, 0.937255, 0.988235, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -198.0
+offset_right = 80.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_sbeoa")
+
+[node name="cloud_controller_main_menu" type="Node2D" parent="."]
+script = ExtResource("9_8njsr")
+cloud_scenes = Array[PackedScene]([ExtResource("10_lsvkk"), ExtResource("11_vtw6h"), ExtResource("12_dl0g1"), ExtResource("13_mrmfg"), ExtResource("14_dvhqp"), ExtResource("15_m4o4l")])
+spawn_margin = 2000.0
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(582, 992)
+texture = ExtResource("6_j2qos")
+region_rect = Rect2(214.435, 742.408, 172.092, 35.0494)
+script = ExtResource("14_1guh3")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.898392, 0.694261, 0.238163, 1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -356.0
+offset_top = 126.0
+offset_right = 505.0
+offset_bottom = 277.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_kpk5a")
+theme_override_font_sizes/font_size = 125
+text = "Ad Astra"
+
+[node name="Label" type="Label" parent="Label"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -9.0
+offset_right = 720.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("2_kpk5a")
+theme_override_font_sizes/font_size = 125
+text = "AD ASTRA"
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = -353.0
+offset_right = 274.0
+offset_bottom = -171.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("6_t5qwv")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("11_q5lkh")
+
+[node name="Sprite2D" type="Sprite2D" parent="StartButton"]
+position = Vector2(434, 88.3164)
+scale = Vector2(1.961, 2)
+texture = ExtResource("12_viitg")
+
+[node name="Label" type="Label" parent="StartButton"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 53.0
+offset_right = 412.0
+offset_bottom = 205.0
+theme_override_fonts/font = ExtResource("2_kpk5a")
+theme_override_font_sizes/font_size = 80
+text = "играть"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_hny25")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2414.5, 2029.79)
+scale = Vector2(4.87207, 2.36895)
+texture = ExtResource("7_x7m8s")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(432, 961)
+script = ExtResource("17_vnjl6")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="SettingsButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = 136.0
+offset_right = 274.0
+offset_bottom = 318.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("6_t5qwv")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("18_4cnkt")
+
+[node name="Sprite2D" type="Sprite2D" parent="SettingsButton"]
+position = Vector2(431, 84)
+scale = Vector2(1.238, 1.26262)
+texture = ExtResource("19_mb6bg")
+
+[node name="Label" type="Label" parent="SettingsButton"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 36.0
+offset_top = 62.0
+offset_right = 436.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource("2_kpk5a")
+theme_override_font_sizes/font_size = 50
+text = "настройки"
+
+[node name="RecordsButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = 368.0
+offset_right = 274.0
+offset_bottom = 550.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("6_t5qwv")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("20_1jelc")
+
+[node name="Sprite2D" type="Sprite2D" parent="RecordsButton"]
+position = Vector2(431, 84)
+scale = Vector2(1.238, 1.26262)
+texture = ExtResource("20_iqv2x")
+
+[node name="Label" type="Label" parent="RecordsButton"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 36.0
+offset_top = 67.0
+offset_right = 436.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource("2_kpk5a")
+theme_override_font_sizes/font_size = 60
+text = "рекорды"
+
+[node name="ExitButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = 605.0
+offset_right = 274.0
+offset_bottom = 787.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("6_t5qwv")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("19_b4bhl")
+
+[node name="Sprite2D" type="Sprite2D" parent="ExitButton"]
+position = Vector2(435, 85)
+scale = Vector2(1.238, 1.26262)
+texture = ExtResource("19_luk8r")
+region_enabled = true
+region_rect = Rect2(310.526, 1406.24, 86.0598, 91.5239)
+
+[node name="Label" type="Label" parent="ExitButton"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 27.0
+offset_top = 56.0
+offset_right = 427.0
+offset_bottom = 156.0
+theme_override_fonts/font = ExtResource("2_kpk5a")
+theme_override_font_sizes/font_size = 80
+text = "выход"
+
+[node name="TutorialButton" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -117.0
+offset_right = 157.0
+grow_vertical = 0
+icon = ExtResource("23_s4hn5")
+expand_icon = true
+script = ExtResource("25_fjttj")
+
+[node name="Sprite2D" type="Sprite2D" parent="TutorialButton"]
+position = Vector2(60, 56)
+texture = ExtResource("19_luk8r")
+region_enabled = true
+region_rect = Rect2(110.79, 1309.75, 85.3767, 91.5238)
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -198.0
+offset_top = -60.0
+offset_right = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_kpk5a")
+theme_override_font_sizes/font_size = 60
+text = "v 1.0.3"

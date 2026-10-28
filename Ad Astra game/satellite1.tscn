@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv1p4pkmf20nd"]
+
+[ext_resource type="Texture2D" uid="uid://ky3vukslr0xu" path="res://spaceShooter2_spritesheet.png" id="1_vw4br"]
+[ext_resource type="Script" path="res://cloud1.gd" id="2_3bbn1"]
+
+[node name="Node2D" type="Sprite2D"]
+modulate = Color(0.5, 0.5, 0.5, 1)
+texture = ExtResource("1_vw4br")
+region_enabled = true
+region_rect = Rect2(-0.0751572, 1059.29, 172.303, 51.3243)
+script = ExtResource("2_3bbn1")

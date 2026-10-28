@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://vccdithfjdlr"]
+
+[ext_resource type="PackedScene" uid="uid://b6sg8j14dlhrl" path="res://epic_cloud_1.tscn" id="1_71dma"]
+[ext_resource type="PackedScene" uid="uid://ct84c7ky0w6yq" path="res://epic_cloud_2.tscn" id="2_jlhti"]
+
+[node name="CloudWall" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_71dma")]
+
+[node name="Node2D2" parent="." instance=ExtResource("2_jlhti")]
+position = Vector2(-182, -4)
+
+[node name="Node2D3" parent="." instance=ExtResource("2_jlhti")]
+position = Vector2(188, -4)
+
+[node name="Node2D4" parent="." instance=ExtResource("1_71dma")]
+position = Vector2(-306, 10)
+
+[node name="Node2D5" parent="." instance=ExtResource("1_71dma")]
+position = Vector2(366, 0)
+
+[node name="Node2D6" parent="." instance=ExtResource("2_jlhti")]
+position = Vector2(-518, 5)
+
+[node name="Node2D7" parent="." instance=ExtResource("2_jlhti")]
+position = Vector2(553, -2)
+
+[node name="Node2D8" parent="." instance=ExtResource("2_jlhti")]
+position = Vector2(577, -2)
+
+[node name="Node2D9" parent="." instance=ExtResource("1_71dma")]
+position = Vector2(755, 2)
+
+[node name="Node2D10" parent="." instance=ExtResource("2_jlhti")]
+position = Vector2(942, 0)
+
+[node name="Node2D11" parent="." instance=ExtResource("2_jlhti")]
+position = Vector2(-579, -4)
+
+[node name="Node2D12" parent="." instance=ExtResource("1_71dma")]
+position = Vector2(-703, 10)
+
+[node name="Node2D13" parent="." instance=ExtResource("2_jlhti")]
+position = Vector2(-915, 5)
+
+[node name="Node2D14" parent="." instance=ExtResource("1_71dma")]
+position = Vector2(-941, 7)
+
+[node name="Node2D15" parent="." instance=ExtResource("1_71dma")]
+position = Vector2(246, 5)
